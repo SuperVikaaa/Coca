@@ -19,13 +19,8 @@
   --logo-color-text: #101010;
   --logo-color-circle: #101010;
 
-  // container
-  --container-padding: 15px;
-  --container-width: 1200px;
-
-  @include mobile {
-    --container-width: 480px;
-  }
+  // overview colors
+  --overview-bg-color: #1d1e25;
 
   [data-theme='dark'] {
     // neutral colors
@@ -39,7 +34,26 @@
     // logo colors
     --logo-color-text: #fff;
     --logo-color-circle: #343542;
+
+    // overview colors
+    --overview-bg-color: #18181d;
   }
+
+    // container
+    --container-padding: 15px;
+    --container-width: 1200px;
+  
+    @include mini-desktop {
+      --container-width: 1000px;
+    }
+
+    @include tablet {
+      --container-width: 860px;
+    }
+
+    @include mobile {
+      --container-width: 480px;
+    }
 
   // transition
   --transition: 0.2s ease-in-out;

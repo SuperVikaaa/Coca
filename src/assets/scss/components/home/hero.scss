@@ -7,7 +7,7 @@
   }
 
   @include mobile {
-    min-height: calc(100dvh - 128px);
+    min-height: calc(100dvh - 109px);
   }
 
   &::before {
@@ -74,14 +74,10 @@
     }
   }
 
-  &__left {
-    max-width: 617px;
-  }
-
   &__title {
     margin-bottom: 114px;
     font-weight: 700;
-    font-size: 80px;
+    @include adaptiv-font(80, 38);
     line-height: 120%;
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
@@ -92,22 +88,25 @@
 
     @include tablet {
       margin-bottom: 44px;
-      font-size: 60px;
     }
 
     @include mobile {
       margin-bottom: 38px;
-      font-size: 48px;
     }
 
     @include small-mobile {
       margin-bottom: 30px;
-      font-size: 38px;
     }
   }
 
   &__desc {
     margin-bottom: 69px;
+    max-width: 671px;
+
+    @include mini-desktop {
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   &__form {
@@ -238,14 +237,15 @@
     }
 
     &-body {
-      &-th {
+      &-td {
+        white-space: nowrap;
         font-weight: 700;
         font-size: 20px;
         line-height: 130%;
         color: #fff;
 
         &:nth-child(1) {
-          padding-right: 80px;
+          padding-right: 50px;
         }
       }
 
