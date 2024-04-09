@@ -9,21 +9,21 @@
       letter-spacing: -0.03em;
       color: var(--neutral-color-100);
 
-    &::before {
-      content: "";
-      display: inline-block;
-      max-width: 76px;
-      width: 100%;
-      height: 1px;
-      background-color: var(--neutral-color-140);
-      transform: translateY(-43px);
+      &::before {
+        content: '';
+        display: inline-block;
+        max-width: 76px;
+        width: 100%;
+        height: 1px;
+        background-color: var(--neutral-color-140);
+        transform: translateY(-43px);
 
-      @include mini-desktop {
-        display: none;
+        @include mini-desktop {
+          display: none;
+        }
       }
     }
-    }
-    
+
     &-large {
       font-size: 24px;
     }
