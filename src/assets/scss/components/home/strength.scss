@@ -1,0 +1,117 @@
+.strength {
+
+  &__container {
+    border-bottom: 1px solid #ededed;
+    padding-top: 66px;
+    padding-bottom: 160px;
+
+    @include tablet {
+      padding-top: 26px;
+      padding-bottom: 80px;
+    }
+  }
+
+  &__list {
+    @include flex-align-center;
+
+    @include tablet {
+      gap: 56px;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    @include mobile {
+      gap: 42px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__item {
+    @include tablet {
+      justify-content: center;
+      min-width: 325px;
+    }
+
+    @include mobile {
+      min-width: 240px;
+    }
+
+    &:not(:last-child) {
+      @include flex-align-center;
+
+      &::after {
+        content: '';
+        display: inline-block;
+        padding-right: 72px;
+        transform: rotate(-90deg);
+        border: 1px solid #ced1d8;
+        width: 99px;
+        height: 1px;
+
+        @include mini-desktop {
+          padding-right: 35px;
+        }
+
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+
+    &-text {
+      font-weight: 500;
+      @include adaptiv-font(18, 16);
+      line-height: 178%;
+      color: #7e8492;
+    }
+
+    &-num {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      @include adaptiv-font(64, 30);
+      line-height: 120%;
+      color: var(--neutral-color-100);
+    }
+  }
+
+  &__list,
+  &__image {
+    margin-bottom: 80px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__info {
+    @include flex-justify-between;
+    gap: 24px;
+
+    @include tablet {
+      gap: 20px;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    @include adaptiv-font(56, 30);
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+  }
+
+  &__text {
+    max-width: 421px;
+    font-weight: 500;
+    @include adaptiv-font(18, 16);
+    line-height: 178%;
+    color: #7e8492;
+
+    @include tablet {
+      max-width: 735px;
+    }
+  }
+}
