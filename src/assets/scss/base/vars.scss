@@ -19,8 +19,8 @@
   --logo-color-text: #101010;
   --logo-color-circle: #101010;
 
-  // overview colors
-  --overview-bg-color: #1d1e25;
+  // bg colors
+  --black-bg-color: #1d1e25;
 
   [data-theme='dark'] {
     // neutral colors
@@ -35,8 +35,8 @@
     --logo-color-text: #fff;
     --logo-color-circle: #343542;
 
-    // overview colors
-    --overview-bg-color: #18181d;
+    // bg colors
+    --black-bg-color: #18181d;
   }
 
   // container
