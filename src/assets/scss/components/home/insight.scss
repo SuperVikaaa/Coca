@@ -9,6 +9,10 @@
       padding-top: 76px;
       padding-bottom: 60px;
     }
+
+    @include small-mobile {
+      padding-bottom: 40px;
+    }
   }
 
   &__title {
