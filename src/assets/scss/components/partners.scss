@@ -36,22 +36,29 @@
       }
     }
   }
+}
 
-  &__list {
-    @include flex-all-center;
-    gap: 10px 30px;
-    flex-wrap: wrap;
+.swiper {
+  width: 100%;
+}
 
-    @include mobile {
-      gap: 10px;
-    }
-  }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
 
-  &__item {
-    @include flex-all-center;
-    border-radius: 16px;
-    width: 160px;
-    height: 90px;
-    background-color: #fff;
+.swiper-slide {
+  // @include flex-all-center;
+  border-radius: 16px;
+  width: 160px;
+  height: 90px;
+  background-color: #fff;
+}
+
+@include mobile {
+  .slider-1 .swiper-wrapper {
+    display: flex;
+    column-gap: 0;
   }
 }
