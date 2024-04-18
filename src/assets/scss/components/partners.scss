@@ -43,13 +43,12 @@
 }
 
 .grid {
-  display: grid;
+  display: grid !important;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
 .swiper-slide {
-  // @include flex-all-center;
   border-radius: 16px;
   width: 160px;
   height: 90px;
@@ -57,7 +56,7 @@
 }
 
 @include mobile {
-  .slider-1 .swiper-wrapper {
+  .slider-1 .grid {
     display: flex;
     column-gap: 0;
   }

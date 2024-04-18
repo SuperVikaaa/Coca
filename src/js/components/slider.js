@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Autoplay, Navigation, Scrollbar } from 'swiper/modules';
+import { Autoplay, Navigation, Scrollbar, Pagination } from 'swiper/modules';
 import 'swiper/css';
 
 export const usePartnersSlider = () => {
@@ -43,27 +43,32 @@ export const usePartnersSlider = () => {
   };
 
   resizableSwiper('(max-width: 576px)', '.slider-1', {
+    modules: [Autoplay],
     spaceBetween: 32,
-    slidesPerView: 2,
+    slidesPerView: 1,
+    loop: true,
     autoplay: {
-      delay: 2000,
+      delay: 2500,
     },
   });
 };
 
 export const useInsightSlider = () => {
   new Swiper('.insight__slider', {
+    modules: [Pagination],
     slidesPerView: '1',
     spaceBetween: 32,
     loop: true,
     centeredSlides: true,
 
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
     breakpoints: {
       993: {
         centeredSlides: false,
-        scrollbar: {
-          el: '.swiper-scrollbar',
-        },
       },
     },
   });
@@ -74,6 +79,7 @@ export const useTestimonialsSlider = () => {
     modules: [Navigation],
     slidesPerView: 'auto',
     spaceBetween: 22,
+    effect: 'fade',
     loop: true,
     navigation: {
       prevEl: '.testimonials__btn--prev',
