@@ -44,15 +44,36 @@
 
 .grid {
   display: grid !important;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr) !important;
   gap: 20px;
 }
 
-.swiper-slide {
+.swiper-item-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
   border-radius: 16px;
-  width: 160px;
-  height: 90px;
+  height: 60px;
+}
+
+.swiper-slide {
+ display: flex !important;
+ flex-direction: column !important;
+ gap: 20px;
+}
+
+.insight__article {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px;
   background-color: #fff;
+}
+
+.swiper-slide-2 {
+ display: flex !important;
+ flex-direction: column !important;
+ gap: 20px;
 }
 
 @include mobile {
