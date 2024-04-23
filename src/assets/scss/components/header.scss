@@ -3,6 +3,7 @@
   background: inherit;
   opacity: 0;
   transition: all var(--transition);
+  opacity: 1;
 
   @include mobile {
     padding: 22px 0 18px;

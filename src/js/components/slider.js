@@ -10,17 +10,17 @@ export const usePartnersSlider = () => {
     callback,
   ) => {
     let swiper;
-  
+
     breakpoint = window.matchMedia(breakpoint);
-  
+
     const enableSwiper = function (className, settings) {
       swiper = new Swiper(className, settings);
-  
+
       if (callback) {
         callback(swiper);
       }
     };
-  
+
     const checker = function () {
       if (breakpoint.matches) {
         return enableSwiper(swiperClass, swiperSettings);
@@ -29,11 +29,11 @@ export const usePartnersSlider = () => {
         return;
       }
     };
-  
+
     breakpoint.addEventListener('change', checker);
     checker();
   };
-  
+
   // const someFunc = (instance) => {
   //   if (instance) {
   //     instance.on('slideChange', function (e) {
@@ -41,10 +41,10 @@ export const usePartnersSlider = () => {
   //     });
   //   }
   // };
-  
+
   resizableSwiper('(max-width: 576px)', '.slider-1', {
-    modules: [Autoplay, ],
-    slidesPerView: '2',
+    modules: [Autoplay],
+    slidesPerView: '1',
     spaceBetween: 32,
     loop: true,
     centeredSlides: true,
@@ -55,13 +55,12 @@ export const usePartnersSlider = () => {
       stopOnLastSlide: false,
     },
   });
-  
 };
 
 export const useInsightSlider = () => {
   new Swiper('.insight__slider', {
     modules: [Pagination, Autoplay],
-    slidesPerView: '2', // Fix insight, теперь скроллится корректно 
+    slidesPerView: '2', // Fix insight, теперь скроллится корректно
     spaceBetween: 32,
     loop: true,
     centeredSlides: true,
@@ -70,7 +69,6 @@ export const useInsightSlider = () => {
       disableOnInteraction: false,
       stopOnLastSlide: false,
     },
-    
 
     pagination: {
       el: '.swiper-pagination',
