@@ -153,11 +153,11 @@
 
     &-block {
       @include flex-justify-between;
-      margin-bottom: 16px;
     }
 
     &-icon {
       @include flex-all-center;
+      margin-bottom: 16px;
       border-radius: 50%;
       width: 40px;
       height: 40px;
@@ -169,10 +169,12 @@
     }
 
     &-link {
-      @include flex-all-center;
+      display: inline-block;
       background: #1463ff;
       border-radius: 100px;
       padding: 6px 12px;
+      width: 123px;
+      height: 32px;
       font-weight: 500;
       font-size: 14px;
       line-height: 143%;
