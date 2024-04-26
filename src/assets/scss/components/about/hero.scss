@@ -1,0 +1,139 @@
+.hero {
+  &__container {
+    border-bottom: 1px solid #ededed;
+    padding-top: 105px;
+    padding-bottom: 160px;
+
+    @include small-tablet {
+      padding-top: 85px;
+      padding-bottom: 80px;
+    }
+
+    @include mobile {
+      padding-top: 45px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 118px;
+    max-width: 1050px;
+    font-weight: 700;
+    @include adaptiv-font(72, 32);
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include mini-desktop {
+      text-align: center;
+    }
+
+    @include small-tablet {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__desc {
+    @include flex-all-between;
+    margin-bottom: 135px;
+    gap: 10px;
+
+    @include mini-desktop {
+      display: none;
+    }
+  }
+
+  &__text {
+    max-width: 900px;
+
+    &::before {
+      content: '';
+      transform: translateY(-93px);
+
+      @include mini-desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__article {
+    &-img {
+      margin-bottom: 24px;
+
+      @include mobile {
+        margin-bottom: 12px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 8px;
+      font-weight: 600;
+      @include adaptiv-font(32, 12);
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: var(--neutral-color-100);
+    }
+
+    &-desc {
+      margin-bottom: 32px;
+      max-width: 494px;
+      font-weight: 500;
+      @include adaptiv-font(18, 12);
+      line-height: 178%;
+      color: #7e8492;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &-btn {
+      padding: 16px 34px;
+      @include adaptiv-font(18, 10);
+      color: var(--neutral-color-10);
+      background-color: var(--neutral-color-100);
+
+      @include mobile {
+        width: 76%;
+        padding: 6px 2px;
+      }
+
+      @include small-mobile {
+        width: 83%;
+      }
+    }
+  }
+
+  &__slider {
+    position: relative;
+
+    &-btns {
+      @include flex-all-center;
+      position: absolute;
+      top: 93px;
+      left: 40%;
+      z-index: var(--z-index-2);
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      transform: translateX(-50%);
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__article {
+    max-width: 582px;
+
+    @include mini-desktop {
+      max-width: 482px;
+    }
+
+    @include mobile {
+      max-width: 360px;
+    }
+  }
+}

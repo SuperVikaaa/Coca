@@ -1,0 +1,48 @@
+.quote {
+  padding: 85px 0;
+  color: var(--neutral-color-100);
+
+  @include small-tablet {
+    padding: 45px 0;
+  }
+
+  &__block {
+    &::before {
+      top: -600px;
+    }
+
+    &::after {
+      bottom: -650px;
+    }
+  }
+
+  &__container {
+    @include flex-all-between;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    @include mini-desktop {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    max-width: 610px;
+    font-weight: 600;
+    @include adaptiv-font(56, 30);
+    line-height: 120%;
+    letter-spacing: -0.04em;
+  }
+
+  &__desc {
+    max-width: 522px;
+    font-weight: 600;
+    @include adaptiv-font(24, 16);
+    line-height: 150%;
+
+    @include mini-desktop {
+      max-width: 600px;
+    }
+  }
+}
