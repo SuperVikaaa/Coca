@@ -1,0 +1,126 @@
+.hero {
+  padding: 95px 0 168px;
+
+  @include mobile {
+    padding: 95px 0 100px;
+  }
+
+  @include small-mobile {
+    padding: 50px 0;
+  }
+
+  &__block {
+    &::before {
+      top: 0px;
+    }
+
+    &::after {
+      bottom: 150px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 58px;
+    font-weight: 700;
+    @include adaptiv-font(72, 32);
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+  
+    @include mobile {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 128px;
+    max-width: 746px;
+    font-weight: 600;
+    @include adaptiv-font(32, 18);
+    line-height: 131%;
+    letter-spacing: -0.03em;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin-bottom: 48px;
+    }
+
+    &::before {
+      content: '';
+      transform: translateY(-45px);
+
+      @include mini-desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__slider {
+    position: relative;
+
+    &-btns {
+      @include flex-all-center;
+      position: absolute;
+      top: 150px;
+      left: 40%;
+      z-index: var(--z-index-2);
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      transform: translateX(-50%);
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__article {
+    max-width: 515px;
+
+    @include mini-desktop {
+      max-width: 482px;
+    }
+
+    @include mobile {
+      max-width: 360px;
+    }
+
+    &-img,
+    &-title {
+      margin-bottom: 16px;
+    }
+
+    &-head {
+      @include flex-all-between;
+      flex-wrap: wrap;
+      gap: 2px;
+      margin-bottom: 24px;
+      font-weight: 400;
+      @include adaptiv-font(14, 8);
+      line-height: 150%;
+      color: #7e8492;
+    }
+
+    &-autor {
+      font-style: normal;
+    }
+
+    &-title {
+      font-weight: 700;
+      @include adaptiv-font(32, 12);
+      line-height: 125%;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+    }
+
+    &-desc {
+      max-width: 359px;
+      font-weight: 500;
+      @include adaptiv-font(20, 10);
+      line-height: 150%;
+      color: #7e8492;
+    }
+  }
+}
