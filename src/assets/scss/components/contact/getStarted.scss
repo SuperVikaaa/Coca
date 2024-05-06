@@ -1,0 +1,147 @@
+.get-started {
+  padding: 76px 0 160px;
+
+  @include mobile {
+    padding: 26px 0 80px;
+  }
+
+  &__container {
+    max-width: 1440px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0;
+
+    @include mini-desktop {
+      max-width: calc(var(--container-width) - (var(--container-padding) * 2));
+    }
+
+    @include tablet {
+      padding-right: var(--container-padding);
+    }
+
+    @include small-tablet {
+      justify-content: center;
+    }
+  }
+
+  &__form {
+    @include mobile {
+      @include flex-column-all-center;
+    }
+
+    &-wrapper {
+      position: absolute;
+      left: 5%;
+      min-width: 608px;
+      padding: 56px 48px;
+      background-color: #fff;
+      border: 1px solid var(--neutral-color-40);
+
+      @include tablet {
+        left: var(--container-padding);
+      }
+
+      @include small-tablet {
+        position: inherit;
+        padding: 36px 28px;
+        min-width: 300px;
+      }
+
+      @include mobile {
+        margin-right: 30px;
+        border: none;
+        width: 100%;
+        min-width: 100%;
+      }
+    }
+
+    &-title {
+      margin-bottom: 20px;
+      font-weight: 600;
+      @include adaptiv-font(36, 22);
+      line-height: 122%;
+      letter-spacing: -0.02em;
+      color: #1d1e25;
+    }
+
+    &-text {
+      margin-bottom: 48px;
+      font-weight: 400;
+      @include adaptiv-font(18, 16);
+      line-height: 167%;
+      color: #7e8492;
+    }
+
+    &-link {
+      font-weight: 500;
+      color: var(--primary-color-30);
+    }
+
+    &-top {
+      @include flex-all-between;
+      gap: 12px;
+
+      @include mobile {
+        gap: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+      }
+    }
+
+    &-label {
+      @include flex-column;
+      margin-bottom: 24px;
+      width: 100%;
+
+      &-text {
+        display: inline-block;
+        margin-bottom: 6px;
+        @include flex-column;
+        font-weight: 500;
+        @include adaptiv-font(14, 13);
+        line-height: 143%;
+        color: #1d1e25;
+      }
+    }
+
+    &-input {
+      border: 1px solid #ededed;
+      border-radius: 8px;
+      padding: 10px 14px;
+      width: 100%;
+      height: 44px;
+      font-weight: 400;
+      @include adaptiv-font(14, 13);
+      line-height: 171%;
+      color: #7e8492;
+
+      &--small {
+        width: 240px;
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+
+      &--textarea {
+        outline: none;
+        resize: none;
+        height: 134px;
+      }
+    }
+
+    &-btn {
+      padding: 16px 32px;
+      background-color: #1d1e25;
+      color: #fff;
+    }
+  }
+
+  &__img {
+    @include small-tablet {
+      display: none;
+    }
+  }
+}
